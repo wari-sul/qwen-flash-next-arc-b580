@@ -1,0 +1,18 @@
+SUMMARY coder: 49/51 correct, 7411 tokens, aggregate 39.7 tok/s, wall 255s
+{"label": "coder-256k", "ctx": 262144, "tokens_per_par": 91.57, "prompt_tokens": 243050, "fill": 0.927, "wall_s": 381.1, "needles_found": 5, "found": {"ORCHID": true, "TUNDRA": true, "QUASAR": true, "FALCON": true, "EMBER": true}, "finish": "stop", "prompt_read_s": 375.784, "prompt_tps": 646.8, "gen_tok": 203, "gen_tps": 39.0, "drafts": "150/159"}
+t01 311 tok 37.2 tok/s 9.8 s stop
+t02 400 tok 42.0 tok/s 11.1 s stop
+t03 612 tok 35.0 tok/s 18.9 s stop
+t04 603 tok 36.2 tok/s 18.2 s stop
+t05 1638 tok 31.6 tok/s 53.4 s stop
+t06 932 tok 36.8 tok/s 26.8 s stop
+t07 5471 tok 33.6 tok/s 164.5 s stop
+t08 6043 tok 32.9 tok/s 185.4 s stop
+t09 917 tok 38.2 tok/s 25.6 s stop
+t10 3462 tok 30.0 tok/s 116.8 s stop
+t11 392 tok 30.5 tok/s 14.2 s stop
+t12 9944 tok 30.5 tok/s 327.6 s stop
+t13 1559 tok 38.1 tok/s 42.5 s stop
+t07L 6975 tok 34.5 tok/s 204.1 s stop
+HARDTEST-DONE
+CODER-TESTS-DONE

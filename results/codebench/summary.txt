@@ -1,0 +1,131 @@
+                                                           coder                 davidau
+
+== code
+  passed                                             45/48 (94%)             46/48 (96%)
+  completion tokens total                                  68581                   80680
+  completion tokens median/task                           1016.0                   994.0
+  wall time total (min)                                     35.0                    47.5
+  wall time median/task (s)                                 32.1                    36.7
+  hit max_tokens (finish=length)                               0                       0
+  answer code lines median                                    19                    19.0
+  test exec time total, passing (s)                         24.1                    26.6
+  decode tok/s (engine, aggregate)                          34.2                    30.2
+  MTP draft acceptance                                       75%                     74%
+
+== casual
+  passed                                             21/24 (88%)             23/24 (96%)
+  completion tokens total                                  70020                   54153
+  completion tokens median/task                           1617.5                  1615.0
+  wall time total (min)                                     34.2                    27.5
+  wall time median/task (s)                                 44.1                    49.7
+  hit max_tokens (finish=length)                               0                       0
+  answer code lines median                                    19                      18
+  test exec time total, passing (s)                         12.4                    13.1
+  decode tok/s (engine, aggregate)                          35.2                    33.9
+  MTP draft acceptance                                       72%                     74%
+
+== xhigh
+  passed                                               4/5 (80%)              5/5 (100%)
+  completion tokens total                                  46706                   54688
+  completion tokens median/task                             9680                   12315
+  wall time total (min)                                     25.7                    30.8
+  wall time median/task (s)                                322.2                   427.8
+  hit max_tokens (finish=length)                               0                       0
+  answer code lines median                                  37.0                      36
+  test exec time total, passing (s)                          0.5                     0.7
+  decode tok/s (engine, aggregate)                          30.7                    30.1
+  MTP draft acceptance                                       68%                     67%
+
+== tools
+  passed                                            16/16 (100%)            16/16 (100%)
+  wall median/call (s)                                       4.2                     5.7
+  decode tok/s (engine, aggregate)                          33.0                    33.1
+  MTP draft acceptance                                       84%                     83%
+
+== agent
+  passed                                            10/10 (100%)            10/10 (100%)
+  turns (LLM calls) median                                   5.0                     5.0
+  turns total                                                 52                      51
+  tool calls total                                            56                      54
+  file writes total                                           11                      11
+  test runs total                                             12                      10
+  malformed/failed tool calls                                  0                       0
+  finished on its own                                         10                      10
+  tests edited (tampering)                                     0                       0
+  prompt tokens total                                      48913                   45871
+  completion tokens total                                  14868                   10147
+  wall time median/episode (s)                              33.0                    44.5
+  wall time total (min)                                      9.1                     7.4
+  decode tok/s (engine, aggregate)                          33.5                    32.6
+  MTP draft acceptance                                      None                    None
+
+== overall
+  all graded items passed                           96/103 (93%)           100/103 (97%)
+  generated tokens (engine) total                         201485                  201019
+  total wall time (h)                                       1.75                    1.91
+
+== per category (code+casual+xhigh)
+  bash                                                 2/3 (67%)              3/3 (100%)
+  debug                                             15/15 (100%)            15/15 (100%)
+  decision                                          13/13 (100%)             12/13 (92%)
+  efficiency                                          9/9 (100%)              9/9 (100%)
+  implement                                          19/23 (83%)             21/23 (91%)
+  refactor                                            7/7 (100%)              7/7 (100%)
+  sql                                                  5/7 (71%)              7/7 (100%)
+
+== per language
+  python                                             57/61 (93%)             58/61 (95%)
+  js                                                  6/6 (100%)              6/6 (100%)
+  sql                                                  5/7 (71%)              7/7 (100%)
+  bash                                                 2/3 (67%)              3/3 (100%)
+
+== per task (code reps / casual / xhigh) and failures
+  impl_merge_intervals                                    c✓✓ c✓                  c✓✓ c✓
+  impl_top_k_words                                        c✓✓ c✓                  c✓✓ c✓
+  impl_ttl_lru                                         c✗✗ c✓ x✓               c✗✓ c✓ x✓
+  impl_parse_duration                                     c✓✗ c✓                  c✓✗ c✓
+  impl_dijkstra_path                                      c✓✓ c✓                  c✓✓ c✓
+  impl_expr_eval                                       c✓✓ c✓ x✗               c✓✓ c✓ x✓
+  eff_count_pairs                                         c✓✓ c✓                  c✓✓ c✓
+  eff_running_median                                      c✓✓ c✓                  c✓✓ c✓
+  eff_log_stats                                           c✓✓ c✓                  c✓✓ c✓
+  debug_find_first                                        c✓✓ c✓                  c✓✓ c✓
+  debug_shared_state                                      c✓✓ c✓                  c✓✓ c✓
+  debug_monthly_totals                                    c✓✓ c✓                  c✓✓ c✓
+  debug_js_async                                          c✓✓ c✓                  c✓✓ c✓
+  refactor_invoice                                     c✓✓ c✓ x✓               c✓✓ c✓ x✓
+  refactor_flatten_iterative                              c✓✓ c✓                  c✓✓ c✓
+  decide_rate_limiter                                  c✓✓ c✓ x✓               c✓✓ c✓ x✓
+  decide_money_sum                                        c✓✓ c✓                  c✓✓ c✓
+  decide_csv_parse                                        c✓✓ c✓                  c✓✓ c✗
+  decide_dedupe_records                                   c✓✓ c✓                  c✓✓ c✓
+  concurrency_counter                                     c✓✓ c✓                  c✓✓ c✓
+  sql_top_earners                                         c✓✓ c✗                  c✓✓ c✓
+  sql_monthly_cumulative                               c✓✓ c✗ x✓               c✓✓ c✓ x✓
+  bash_largest_files                                      c✓✓ c✗                  c✓✓ c✓
+  js_deep_equal                                           c✓✓ c✓                  c✓✓ c✓
+  tc_single                                                  t✓✓                     t✓✓
+  tc_parallel                                                t✓✓                     t✓✓
+  tc_no_tool                                                 t✓✓                     t✓✓
+  tc_choose_tool                                             t✓✓                     t✓✓
+  tc_complex_args                                            t✓✓                     t✓✓
+  tc_use_result                                              t✓✓                     t✓✓
+  tc_anthropic_call                                          t✓✓                     t✓✓
+  tc_anthropic_result                                        t✓✓                     t✓✓
+  ag_bugfix                                                  a✓✓                     a✓✓
+  ag_feature                                                 a✓✓                     a✓✓
+  ag_crossfile                                               a✓✓                     a✓✓
+  ag_perf                                                    a✓✓                     a✓✓
+  ag_vague                                                   a✓✓                     a✓✓
+
+== failure notes
+  [coder] code/impl_ttl_lru rep0: finish=stop tok=3691 :: TIMEOUT
+  [coder] code/impl_ttl_lru rep1: finish=stop tok=2371 :: TIMEOUT
+  [coder] code/impl_parse_duration rep1: finish=stop tok=2155 :: Traceback (most recent call last):   File "/tmp/cb_roqw3wat/test.py", line 10, in <module>     raise AssertionError(f"no ValueError for {s!r}") AssertionError: no ValueError for '1h\n' 
+  [coder] casual/sql_top_earners rep0: finish=stop tok=872 :: ine 21, in <module>     exp = db.execute(REF).fetchall(); got = db.execute(sql).fetchall()                                             ~~~~~~~~~~^^^^^ sqlite3.OperationalError: near ">": syntax error 
+  [coder] casual/sql_monthly_cumulative rep0: finish=stop tok=1501 :: most recent call last):   File "/tmp/cb_l4rg4g4p/test.py", line 16, in <module>     got = db.execute(sql).fetchall()           ~~~~~~~~~~^^^^^ sqlite3.OperationalError: no such table: generate_series 
+  [coder] casual/bash_largest_files rep0: finish=stop tok=1921 :: (most recent call last):   File "/tmp/cb_n3nhnfgs/test.py", line 13, in <module>     assert r.stdout.strip().split("\n") == exp, r.stdout            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ AssertionError 
+  [coder] xhigh/impl_expr_eval rep0: finish=stop tok=12802 :: term()   File "/tmp/cb_voyvzvsf/solution.py", line 92, in parse_term     if i < n and s[i] == '*':        ^ UnboundLocalError: cannot access local variable 'i' where it is not associated with a value 
+  [davidau] code/impl_ttl_lru rep0: finish=stop tok=2940 :: TIMEOUT
+  [davidau] code/impl_parse_duration rep1: finish=stop tok=974 :: Traceback (most recent call last):   File "/tmp/cb_udw8lxtg/test.py", line 10, in <module>     raise AssertionError(f"no ValueError for {s!r}") AssertionError: no ValueError for '1h\n' 
+  [davidau] casual/decide_csv_parse rep0: finish=stop tok=5371 :: Traceback (most recent call last):   File "/tmp/cb_isqx4emm/test.py", line 9, in <module>     assert f("") == []            ^^^^^^^^^^^ AssertionError 

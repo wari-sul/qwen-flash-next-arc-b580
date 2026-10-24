@@ -1,0 +1,9 @@
+This repository is dual-licensed:
+
+  * Code (everything under benchmark/, scripts/, configs/) is licensed under the MIT License, see LICENSE-MIT.
+  * Documentation and written content (README.md, docs/, results/**/*.md) is licensed under
+    Creative Commons Attribution 4.0 International (CC BY 4.0), see LICENSE-CC-BY-4.0.
+
+Benchmark result data (results/) is published under CC BY 4.0.
+Model weights, Strata and other third-party software referenced here are under their own licenses
+and are not included in this repository.

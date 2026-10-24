@@ -1,0 +1,31 @@
+ARGS --max-context 131072 --kv int8 --stream-experts --vram-reserve-mib 2048 --mtp /models/strata-data/mtp/rt --spec-min-p 0.5 --kv-resident 32768
+{"status": "loaded"}
+[strata] 2026-10-23 17:10:07 engine started: /root/.local/share/strata/components/engine/0.1.48-linux-x86_64-sycl/strata --serve --pack /models/strata-data/packs/iq3_s --native /models/qwen38-flash-next-abliterated-iq3s/
+strata generate: KV streaming: 32768 of 131072 cells per QSA layer in VRAM, the K/V in 1.55 GiB of pinned RAM
+strata generate: expert cache 1856 slots, 3.57 GiB of VRAM; policy is
+strata generate: 22905 of 22720 experts missing from VRAM (+ 185 in the prompt loan's slots) mirrored in pinned host memory (43.62 GiB, 12.9 s); the GPU reads them over PCIe
+strata serve: 2222 MiB of VRAM free with everything loaded
+MEM ct_used=1890M
+{"label": "128k", "ctx": 131072, "tokens_per_par": 91.57, "prompt_tokens": 121165, "fill": 0.924, "wall_s": 191.7, "needles_found": 5, "found": {"ORCHID": true, "TUNDRA": true, "QUASAR": true, "FALCON": true, "EMBER": true}, "finish": "stop", "prompt_read_s": 185.284, "prompt_tps": 653.9, "gen_tok": 225, "gen_tps": 35.6, "drafts": "167/188"}
+SUMMARY ctx-128k: 33/34 correct, 5235 tokens, aggregate 35.7 tok/s, wall 227s
+DONE 128k
+ARGS --max-context 262144 --kv int8 --stream-experts --vram-reserve-mib 2048 --mtp /models/strata-data/mtp/rt --spec-min-p 0.5 --kv-resident 32768
+{"status": "loaded"}
+[strata] 2026-10-23 17:17:47 engine started: /root/.local/share/strata/components/engine/0.1.48-linux-x86_64-sycl/strata --serve --pack /models/strata-data/packs/iq3_s --native /models/qwen38-flash-next-abliterated-iq3s/
+strata generate: KV streaming: 32768 of 262144 cells per QSA layer in VRAM, the K/V in 3.09 GiB of pinned RAM
+strata generate: expert cache 1742 slots, 3.35 GiB of VRAM; policy is
+strata generate: 23008 of 22834 experts missing from VRAM (+ 174 in the prompt loan's slots) mirrored in pinned host memory (43.82 GiB, 12.9 s); the GPU reads them over PCIe
+strata serve: 2221 MiB of VRAM free with everything loaded
+MEM ct_used=1893M
+{"label": "256k", "ctx": 262144, "tokens_per_par": 91.57, "prompt_tokens": 243050, "fill": 0.927, "wall_s": 451.8, "needles_found": 5, "found": {"ORCHID": true, "TUNDRA": true, "QUASAR": true, "FALCON": true, "EMBER": true}, "finish": "stop", "prompt_read_s": 445.575, "prompt_tps": 545.5, "gen_tok": 202, "gen_tps": 33.2, "drafts": "145/170"}
+SUMMARY ctx-256k: 34/34 correct, 3807 tokens, aggregate 34.7 tok/s, wall 217s
+DONE 256k
+ARGS --max-context 524288 --kv int8 --stream-experts --vram-reserve-mib 2048 --mtp /models/strata-data/mtp/rt --spec-min-p 0.5 --kv-resident 32768 --rope-scaling yarn --rope-scale 2
+{"status": "loaded"}
+[strata] 2026-10-23 17:29:38 engine started: /root/.local/share/strata/components/engine/0.1.48-linux-x86_64-sycl/strata --serve --pack /models/strata-data/packs/iq3_s --native /models/qwen38-flash-next-abliterated-iq3s/
+strata generate: rope scaling yarn, factor 2 (freq_scale 0.5, base 1e+07, mscale 1.069315), --max-context 524288 against a trained context of 262144
+strata generate: KV streaming: 32768 of 524288 cells per QSA layer in VRAM, the K/V in 6.19 GiB of pinned RAM
+strata generate: expert cache 1509 slots, 2.91 GiB of VRAM; policy is
+strata generate: 23217 of 23067 experts missing from VRAM (+ 150 in the prompt loan's slots) mirrored in pinned host memory (44.22 GiB, 41.0 s); the GPU reads them over PCIe
+strata serve: 2219 MiB of VRAM free with everything loaded
+MEM ct_used=1946M

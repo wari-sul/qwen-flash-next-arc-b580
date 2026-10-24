@@ -1,0 +1,14 @@
+#!/bin/bash
+# strata-unload-peer <port> <config.json>
+# Used as Strata's before_load hook so only one model sits on the Arc B580 at a time.
+# Unloads the model served on <port>; exits 0 only when that server reports it unloaded (or is not running).
+PORT=$1; CFG=$2
+K=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['api_key'])" "$CFG") || exit 2
+code=$(curl -s -o /dev/null -w '%{http_code}' -m 320 -X POST -H "Authorization: Bearer $K" -H 'Content-Type: application/json' "http://127.0.0.1:$PORT/unload?wait=300")
+[ "$code" = "000" ] && { echo "peer :$PORT not running"; exit 0; }
+for i in 1 2 3 4 5 6 7 8 9 10; do
+  h=$(curl -s -m 5 "http://127.0.0.1:$PORT/health")
+  echo "$h" | grep -q '"loaded": false' && { echo "peer :$PORT unloaded"; exit 0; }
+  sleep 1
+done
+echo "peer :$PORT still loaded (unload http $code)"; exit 1

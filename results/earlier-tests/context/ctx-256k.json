@@ -1,0 +1,23 @@
+{
+ "label": "256k",
+ "ctx": 262144,
+ "tokens_per_par": 91.57,
+ "prompt_tokens": 243050,
+ "fill": 0.927,
+ "wall_s": 451.8,
+ "needles_found": 5,
+ "found": {
+  "ORCHID": true,
+  "TUNDRA": true,
+  "QUASAR": true,
+  "FALCON": true,
+  "EMBER": true
+ },
+ "answer": "ORCHID: 547568\nTUNDRA: 629173\nQUASAR: 663470\nFALCON: 453816\nEMBER: 528906",
+ "finish": "stop",
+ "prompt_read_s": 445.575,
+ "prompt_tps": 545.5,
+ "gen_tok": 202,
+ "gen_tps": 33.2,
+ "drafts": "145/170"
+}

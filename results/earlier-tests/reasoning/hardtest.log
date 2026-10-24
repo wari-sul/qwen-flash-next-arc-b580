@@ -1,0 +1,15 @@
+t01 361 tok 32.7 tok/s 12.8 s stop
+t02 230 tok 33.1 tok/s 8.6 s stop
+t03 446 tok 33.3 tok/s 15.1 s stop
+t04 436 tok 33.5 tok/s 14.9 s stop
+t05 3173 tok 28.9 tok/s 112.0 s stop
+t06 1977 tok 31.4 tok/s 64.7 s stop
+t07 4050 tok 31.5 tok/s 130.9 s stop
+t08 12298 tok 37.3 tok/s 424.4 s stop
+t09 867 tok 33.1 tok/s 28.1 s stop
+t10 5360 tok 29.2 tok/s 185.7 s stop
+t11 1341 tok 27.7 tok/s 50.2 s stop
+t12 7123 tok 28.3 tok/s 253.8 s stop
+t13 2425 tok 35.7 tok/s 73.0 s stop
+t07L 4642 tok 35.1 tok/s 135.1 s stop
+HARDTEST-DONE
